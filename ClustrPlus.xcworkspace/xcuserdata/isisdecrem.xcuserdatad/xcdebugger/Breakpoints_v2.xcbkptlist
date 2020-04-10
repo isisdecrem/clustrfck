@@ -306,38 +306,6 @@
             endingLineNumber = "117"
             landmarkName = "loadUpdates()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1B5CE64A-74A7-45EE-A5BA-05D5AF60BC38 - 2f683ea70304d70c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ClustrPlus.ClubDetailsAndEditViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "ClustrPlus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/isisdecrem/Documents/ClustrPlus/ClustrPlus/ClubDetailsAndEditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117"
-                  offsetFromSymbolStart = "3386">
-               </Location>
-               <Location
-                  uuid = "1B5CE64A-74A7-45EE-A5BA-05D5AF60BC38 - 1213657cf8897abd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (__C.FIRDataSnapshot) -&gt; () in ClustrPlus.ClubDetailsAndEditViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "ClustrPlus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/isisdecrem/Documents/ClustrPlus/ClustrPlus/ClubDetailsAndEditViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "196">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

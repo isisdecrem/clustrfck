@@ -32,16 +32,28 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
         if scheduleState == true {
             print("I am here")
             cell.title.text = events[indexPath.section].title
+            cell.Time.text = events[indexPath.section].time
+            cell.Date.text = events[indexPath.section].date
+            cell.Location.text = events[indexPath.section].location
+            cell.Description.text = events[indexPath.section].extra
+            cell.Time.isHidden = false
+            cell.Location.isHidden = false
+            cell.Date.isHidden = false
             cell.indexPath = indexPath
         }else{
-            //cant do this until the updates file has variables w/ names
-//           cell.title.text = updates[indexPath.section].name
-//           cell.indexPath = indexPath
+      
+            cell.title.text = updates[indexPath.section].title
+            cell.Description.text = updates[indexPath.section].update
+            cell.Time.isHidden = true
+            cell.Location.isHidden = true
+            cell.Date.isHidden = true
+            cell.indexPath = indexPath
         }
-            
+        
         return cell
-            
+        
     }
+    
     
     
 
@@ -60,18 +72,7 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
     
     @IBOutlet weak var newButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        ref = Database.database().reference()
-        clubName.text = club.name
-        clubLink.text = club.signUpLink
-        clubDescription.text = club.description
-        tableView.dataSource = self
-        tableView.delegate = self
-        let newEvent = #imageLiteral(resourceName: "New Schedule")
-        newButton.setImage(newEvent, for: .normal)
-        
-        if scheduleState == true {
+        func loadEvent(){
         ref.child("Events").queryOrdered(byChild: "Event Title").observe(.value, with: { snapshot
             in
             var newEvents: [Event] = []
@@ -88,8 +89,45 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
             self.events = newEvents
             self.tableView.reloadData()
         })
+    }
+    
+    func loadUpdates(){
+        ref.child("Updates").queryOrdered(byChild: "Update Title").observe(.value, with: { snapshot
+            in
+            var newUpdates: [Update] = []
+            for child in snapshot.children{
+                if let snapshot = child as? DataSnapshot,
+                let update = Update(snapshot: snapshot){
+                    if  update.clubId == self.club.clubId{
+                        print("New update posted")
+                        newUpdates.append(update)
+                    }
+                }
+            }
+            
+            self.updates = newUpdates
+            self.tableView.reloadData()
+        })
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ref = Database.database().reference()
+        clubName.text = club.name
+        clubLink.text = club.signUpLink
+        clubDescription.text = club.description
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 500
+        let newEvent = #imageLiteral(resourceName: "New Schedule")
+        newButton.setImage(newEvent, for: .normal)
+        
+        if scheduleState == true {
+            loadEvent()
         } else {
-            // load the updates
+            loadUpdates()
         }
     }
     
@@ -102,6 +140,7 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
             scheduleState = true
             let newEvent = #imageLiteral(resourceName: "New Schedule")
             newButton.setImage(newEvent, for: .normal)
+            loadEvent()
         
         }
     }
@@ -115,6 +154,7 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
             scheduleState = false
             let newUpdate = #imageLiteral(resourceName: "New Update")
             newButton.setImage(newUpdate, for: .normal)
+            loadUpdates()
             
         }
     }
