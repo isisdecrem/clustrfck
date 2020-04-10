@@ -1,0 +1,6 @@
+framework module Pods_ClustrPlus_ClustrPlusUITests {
+  umbrella header "Pods-ClustrPlus-ClustrPlusUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
