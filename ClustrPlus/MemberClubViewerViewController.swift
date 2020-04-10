@@ -70,7 +70,7 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
     
     @IBOutlet weak var clubDescription: UITextView!
     
-    @IBOutlet weak var newButton: UIButton!
+ 
     
         func loadEvent(){
         ref.child("Events").queryOrdered(byChild: "Event Title").observe(.value, with: { snapshot
@@ -122,7 +122,6 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 500
         let newEvent = #imageLiteral(resourceName: "New Schedule")
-        newButton.setImage(newEvent, for: .normal)
         
         if scheduleState == true {
             loadEvent()
@@ -139,7 +138,6 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
             updateB.setImage(UL, for: .normal)
             scheduleState = true
             let newEvent = #imageLiteral(resourceName: "New Schedule")
-            newButton.setImage(newEvent, for: .normal)
             loadEvent()
         
         }
@@ -153,7 +151,6 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
             updateB.setImage(UD, for: .normal)
             scheduleState = false
             let newUpdate = #imageLiteral(resourceName: "New Update")
-            newButton.setImage(newUpdate, for: .normal)
             loadUpdates()
             
         }
