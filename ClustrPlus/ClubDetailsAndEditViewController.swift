@@ -200,10 +200,11 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
             DispatchQueue.main.asyncAfter(deadline: when, execute: {
                 if self.scheduleState == true {
                     self.ref.child("Events").child(self.keyArray[indexPath.row]).removeValue()
+                    self.events.remove(at: indexPath.row)
                 } else {
                     self.ref.child("Updates").child(self.keyArray[indexPath.row]).removeValue()
+                    self.updates.remove(at: indexPath.row)
                 }
-                self.events.remove(at: indexPath.row)
                 tableView.reloadData()
                 self.keyArray = []
             })

@@ -69,5 +69,40 @@ class manageClubsMainscreen: UIViewController, UITableViewDelegate, UITableViewD
             detailEditView?.club = clubsList[((cell.indexPath?.section)!)]
         }
     }
+    
+// POSSIBLE CODE FOR DELETING CLUBS
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            getAllKeys()
+//            let when = DispatchTime.now() + 1
+//            DispatchQueue.main.asyncAfter(deadline: when, execute: {
+//                self.ref.child("Clubs").child(self.keyArray[indexPath.row]).removeValue()
+//                self.clubsList.remove(at: indexPath.row)
+//                tableView.reloadData()
+//                self.keyArray = []
+//            })
+//        }
+//    }
+//
+//
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//
+//    var keyArray:[String] = []
+//
+//    func getAllKeys() {
+//
+//        ref?.child("Clubs").observeSingleEvent(of: .value, with: {(snapshot) in
+//            for child in snapshot.children {
+//                let snap = child as! DataSnapshot
+//                let key = snap.key
+//                self.keyArray.append(key)
+//
+//                }
+//            })
+//
+//    }
+
 
 }
