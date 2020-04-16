@@ -11,11 +11,22 @@ import Firebase
 
 class clubLoginPage: UIViewController, UITextFieldDelegate {
    
-
+    var schoolCode: String = ""
     
     @IBOutlet weak var email: UITextField!
     
     @IBOutlet weak var password: UITextField!
+    
+    @IBAction func signUpPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "signInSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "signInSegue"{
+            let signUpView = segue.destination as? clubSignUpForAcct
+            signUpView!.schoolCode = schoolCode
+        }
+    }
+
     
     func showAlert(message : String){
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
@@ -29,6 +40,7 @@ class clubLoginPage: UIViewController, UITextFieldDelegate {
     @IBAction func loginPressed(_ sender: Any) {
         let emailValue = email.text
         let pwValue = password.text
+        
         
         if emailValue != ""  && pwValue != ""{
             Auth.auth().signIn(withEmail: emailValue!, password: pwValue!){ (user, error) in
@@ -53,15 +65,6 @@ class clubLoginPage: UIViewController, UITextFieldDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

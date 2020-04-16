@@ -16,14 +16,16 @@ class Club{
     var description: String = ""
     var signUpLink: String = ""
     var clubId: Int = 0
+    var schoolCode: String = ""
     
-    init(clubId: Int, id: String, name: String, description: String, signUpLink: String) {
+    init(clubId: Int, id: String, name: String, description: String, signUpLink: String, schoolCode: String) {
         self.ref = nil
         self.clubId = clubId
         self.id = id
         self.name = name
         self.description = description
         self.signUpLink = signUpLink
+        self.schoolCode = schoolCode
         
     }
     
@@ -34,7 +36,8 @@ class Club{
             let fId = value["Id"] as? String,
             let fName = value["Club Name"] as? String,
             let fDescription = value["Club Description"] as? String,
-            let fSignUpLink = value["Club Sign Up Link"] as? String
+            let fSignUpLink = value["Club Sign Up Link"] as? String,
+            let fSchoolCode = value["School Code"] as? String
         else{
             return nil
         }
@@ -44,6 +47,7 @@ class Club{
         self.name = fName
         self.description = fDescription
         self.signUpLink = fSignUpLink
+        self.schoolCode = fSchoolCode
     }
     
     func toAnyObject() -> Any{
@@ -51,7 +55,8 @@ class Club{
             "Id": id,
                 "Club Name" : name,
                "Club Description" : description,
-               "Club Sign Up Link" : signUpLink
+               "Club Sign Up Link" : signUpLink,
+               "School Code" : schoolCode
         ]
     }
     

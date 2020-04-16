@@ -11,6 +11,7 @@ import Firebase
 
 class makeClubViewController: UIViewController {
     var ref : DatabaseReference!
+    var schoolCode: String = ""
     
     
     @IBOutlet weak var clubNameField: UITextField!
@@ -38,7 +39,7 @@ class makeClubViewController: UIViewController {
         let clubId = Int(NSDate.timeIntervalSinceReferenceDate * 1000)
         
         if clubName != ""  && description != "" && signUpLink != "" {
-            self.ref.child("Clubs").childByAutoId().setValue([ "Club Id" : clubId, "Id" : userId,"Club Name" : clubName!, "Club Description" : description!, "Club Sign Up Link" : signUpLink]){ (error, ref) -> Void in
+            self.ref.child("Clubs").childByAutoId().setValue([ "Club Id" : clubId, "Id" : userId,"Club Name" : clubName!, "Club Description" : description!, "Club Sign Up Link" : signUpLink, "School Code" : schoolCode]){ (error, ref) -> Void in
                 self.showAlert(message: "The club has been added", title: "Success")
             }
         }else{
@@ -49,7 +50,16 @@ class makeClubViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        
+        self.ref?.child("User").observeSingleEvent(of: .value, with: { snapshot in
+            for child in snapshot.children {
+                if let snapshot = child as? DataSnapshot,
+                    let userItem = User(snapshot: snapshot) {
+                    if userItem.uId == Auth.auth().currentUser?.uid {
+                        self.schoolCode = userItem.schoolCode
+                    }
+                }
+            }
+        })
         let borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         descriptionField.layer.borderWidth = 1
         descriptionField.layer.borderColor = borderColor.cgColor

@@ -51,7 +51,7 @@ class EditClubViewController: UIViewController {
                             if self.club?.clubId == clubItem.clubId{
                                 self.ref.child("Clubs").child(snapshot.key).setValue([ "Club Id" : self.club!.clubId, "Id" : self.club!.id
                                     ,"Club Name" : newName!, "Club Description" : newDescription!, "Club Sign Up Link" : newLink!])
-                                self.delegate?.finishEditing(club: Club(clubId: self.club!.clubId, id:  self.club!.id, name: newName!, description: newDescription!, signUpLink: newLink!))
+                                self.delegate?.finishEditing(club: Club(clubId: self.club!.clubId, id:  self.club!.id, name: newName!, description: newDescription!, signUpLink: newLink!, schoolCode: self.club!.schoolCode))
                                 self.showAlert(message: "The club has been updated", title: "Success")
 
                                 break

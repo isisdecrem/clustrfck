@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class memberBrowseMainscreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    var schoolCode: String = ""
     var clubsList: [Club] = []
     
     var ref: DatabaseReference!
@@ -45,7 +45,9 @@ class memberBrowseMainscreen: UIViewController, UITableViewDelegate, UITableView
             for child in snapshot.children{
                 if let snapshot = child as? DataSnapshot,
                 let club = Club(snapshot: snapshot){
-                newClubs.append(club)
+                    if club.schoolCode == self.schoolCode{
+                        newClubs.append(club)
+                    }
                 }
             
             }

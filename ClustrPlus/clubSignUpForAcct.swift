@@ -11,7 +11,8 @@ import Firebase
 
 class clubSignUpForAcct: UIViewController, UITextFieldDelegate {
     
-   
+    var schoolCode: String = ""
+    var ref: DatabaseReference!
 
     @IBOutlet weak var emailField: UITextField!
     
@@ -20,20 +21,10 @@ class clubSignUpForAcct: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmPwField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -67,6 +58,9 @@ class clubSignUpForAcct: UIViewController, UITextFieldDelegate {
                            { (user, error) in
                                if (error == nil)
                                {
+                                self.ref.child("User").childByAutoId().setValue(["User Id" : Auth.auth().currentUser?.uid ,"Email" : emailText, "School Code" : self.schoolCode]){ (error, ref) -> Void in
+                        
+                                }
                                 self.performSegue(withIdentifier: "signUpSegue", sender: self)
                                }else{
                                 self.showAlert(message: error!.localizedDescription)

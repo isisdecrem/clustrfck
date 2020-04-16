@@ -19,6 +19,7 @@
 		D600500924357B59007DCE3C /* EventCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600500824357B59007DCE3C /* EventCellTableViewCell.swift */; };
 		D6183F0E242EDA68004034EC /* makeClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183F0D242EDA68004034EC /* makeClubViewController.swift */; };
 		D6183F10242EDBD7004034EC /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183F0F242EDBD7004034EC /* Club.swift */; };
+		D62662B42447EB6B00C301BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62662B32447EB6B00C301BE /* User.swift */; };
 		D62977DF24288285000C25A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977DE24288285000C25A1 /* AppDelegate.swift */; };
 		D62977E124288285000C25A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977E024288285000C25A1 /* SceneDelegate.swift */; };
 		D62977E324288285000C25A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977E224288285000C25A1 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		D600500824357B59007DCE3C /* EventCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellTableViewCell.swift; sourceTree = "<group>"; };
 		D6183F0D242EDA68004034EC /* makeClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeClubViewController.swift; sourceTree = "<group>"; };
 		D6183F0F242EDBD7004034EC /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		D62662B32447EB6B00C301BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D62977DB24288285000C25A1 /* ClustrPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClustrPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62977DE24288285000C25A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D62977E024288285000C25A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				D629781724288B51000C25A1 /* memberBrowseMainscreen.swift */,
 				D629781524288AAA000C25A1 /* manageClubsMainscreen.swift */,
 				D629781324288A2C000C25A1 /* clubSignUpForAcct.swift */,
+				D62662B32447EB6B00C301BE /* User.swift */,
 				D62978112428893A000C25A1 /* clubLoginPage.swift */,
 				D62977EA24288288000C25A1 /* Assets.xcassets */,
 				D62977EC24288288000C25A1 /* LaunchScreen.storyboard */,
@@ -483,6 +486,7 @@
 				D600500524356951007DCE3C /* Event.swift in Sources */,
 				D60050012432A4F0007DCE3C /* MemberClubViewerViewController.swift in Sources */,
 				D629781424288A2C000C25A1 /* clubSignUpForAcct.swift in Sources */,
+				D62662B42447EB6B00C301BE /* User.swift in Sources */,
 				D62977DF24288285000C25A1 /* AppDelegate.swift in Sources */,
 				D6CC1F9224312C4B00B172BB /* ClubDetailsAndEditViewController.swift in Sources */,
 				D62978122428893A000C25A1 /* clubLoginPage.swift in Sources */,
