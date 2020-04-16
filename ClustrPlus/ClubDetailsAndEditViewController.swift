@@ -192,7 +192,7 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
         }
       }
     
-    // CODE FOR DELETE - DOES FULLY WORK YET
+    // CODE FOR DELETE - WORKS FOR EVENTS
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             getAllKeys()
@@ -200,7 +200,8 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
             DispatchQueue.main.asyncAfter(deadline: when, execute: {
                 self.ref.child("Events").child(self.keyArray[indexPath.row]).removeValue()
                 self.events.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .automatic)
+               // tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.reloadData()
                 self.keyArray = []
             })
         }
@@ -223,53 +224,5 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
             }
         })
     }
-
-// THIS DOES NOT WORK - ONLY HERE FOR REFERENCE WILL DELETE ONCE THIS WORKS
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        let event = events[indexPath.row]
-//        let alertController = UIAlertController(title: event.title, message: "View or delete", preferredStyle: .alert)
-        
-//        let viewAction = UIAlertAction(title: "View", style:.default){(_) in
-//
-//            let id = event.clubId
-//            let name = alertController.textFields?[0].text
-//            let date = alertController.textFields?[1].text
-//
-//        }
-        
-//        let deleteAction = UIAlertAction(title: "Delete", style:.default){(_) in
-//            self.deleteEvent(id: String (event.clubId))
-//        }
-//
-//        alertController.addTextField{(textField) in
-//            textField.text = event.title
-//        }
-//        alertController.addTextField{(textField) in
-//            textField.text = event.date
-//        }
-//
-//      alertController.addAction(viewAction)
-//        alertController.addAction(deleteAction)
-//
-//        present(alertController, animated: true, completion: nil)
-//    }
-//
-//    func deleteEvent(id: String){
-//        ref.child(id).setValue(nil)
-//    }
-
-    //ANOTHER VERSION OF DELETE 
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        self.ref.child("Events").child(keyArray[indexPath.row]).removeValue()
-//        self.events.remove(at: indexPath.row)
-//        tableView.deleteRows(at: [indexPath], with: .automatic)
-//        tableView.reloadData()
-//    }
-    
 
 }
