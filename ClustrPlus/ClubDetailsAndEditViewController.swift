@@ -192,35 +192,43 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
         }
       }
     
-    // CODE FOR DELETE - WORKS FOR EVENTS NOT UPDATES YET
+    // CODE FOR DELETE
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            getAllKeys()
-            let when = DispatchTime.now() + 1
-            DispatchQueue.main.asyncAfter(deadline: when, execute: {
-                if self.scheduleState == true {
+            if self.scheduleState == true{
+                getAllKeys()
+                let when = DispatchTime.now() + 1
+                DispatchQueue.main.asyncAfter(deadline: when, execute: {
                     self.ref.child("Events").child(self.keyArray[indexPath.row]).removeValue()
                     self.events.remove(at: indexPath.row)
-                } else {
-                    self.ref.child("Updates").child(self.keyArray[indexPath.row]).removeValue()
+                    tableView.reloadData()
+                    self.keyArray = []
+                })
+            } else {
+                getAllKeysU()
+                let when = DispatchTime.now() + 1
+                DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                    self.ref.child("Updates").child(self.keyArrayU[indexPath.row]).removeValue()
                     self.updates.remove(at: indexPath.row)
-                }
-                tableView.reloadData()
-                self.keyArray = []
-            })
+                    tableView.reloadData()
+                    self.keyArrayU = []
+                })
+                    
+            }
+                    
         }
+            
     }
-
-
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
     var keyArray:[String] = []
+    var keyArrayU:[String] = []
 
     func getAllKeys() {
-        if scheduleState == true {
-            ref?.child("Events").observeSingleEvent(of: .value, with: {(snapshot) in
+        ref?.child("Events").observeSingleEvent(of: .value, with: {(snapshot) in
                 for child in snapshot.children {
                     let snap = child as! DataSnapshot
                     let key = snap.key
@@ -228,16 +236,18 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
 
                 }
             })
-        } else{
-            ref?.child("Updates").observeSingleEvent(of: .value, with: {(snapshot) in
-                for child in snapshot.children {
-                    let snap = child as! DataSnapshot
-                    let key = snap.key
-                    self.keyArray.append(key)
 
-                }
-            })
-        }
+    }
+    
+    func getAllKeysU() {
+        ref?.child("Updates").observeSingleEvent(of: .value, with: {(snapshot) in
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                let key = snap.key
+                self.keyArrayU.append(key)
+
+            }
+        })
     }
 
 }
