@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class CreateNewUpdateViewController: UIViewController{
+class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
 
     @IBOutlet weak var updateTitle: UITextField!
     
@@ -46,8 +46,36 @@ class CreateNewUpdateViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        let borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
+        updateInfo.layer.borderWidth = 1
+        updateInfo.layer.borderColor = borderColor.cgColor
+        updateInfo.layer.cornerRadius = 5.0
+        updateInfo.text = "Describe your update"
+        updateInfo.textColor = UIColor.lightGray
+        updateInfo.delegate = self
         
 
+    }
+    
+    func textViewDidBeginEditing (_ textView: UITextView) {
+        if textView.text == "Describe your update" {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textView (_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Describe your update"
+        }
+        
     }
     
 
