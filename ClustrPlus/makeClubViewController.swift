@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class makeClubViewController: UIViewController {
+class makeClubViewController: UIViewController, UITextViewDelegate{
     var ref : DatabaseReference!
     var schoolCode: String = ""
     
@@ -29,6 +29,7 @@ class makeClubViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
     
     @IBAction func savePressed(_ sender: Any) {
         let clubName = clubNameField.text
@@ -63,7 +64,31 @@ class makeClubViewController: UIViewController {
         let borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         descriptionField.layer.borderWidth = 1
         descriptionField.layer.borderColor = borderColor.cgColor
-        descriptionField.layer.cornerRadius = 5.0       
+        descriptionField.layer.cornerRadius = 5.0
+        descriptionField.text = "Describe your club"
+        descriptionField.textColor = UIColor.lightGray
+        descriptionField.delegate = self
+    }
+    
+    func textViewDidBeginEditing (_ textView: UITextView) {
+        if textView.text == "Describe your club" {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textView (_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Describe your club"
+        }
+        
     }
 
 }
