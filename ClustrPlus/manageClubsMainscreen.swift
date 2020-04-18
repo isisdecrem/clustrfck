@@ -73,14 +73,7 @@ class manageClubsMainscreen: UIViewController, UITableViewDelegate, UITableViewD
  //CODE FOR DELETING CLUBS
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            getAllKeys()
-            let when = DispatchTime.now() + 1
-            DispatchQueue.main.asyncAfter(deadline: when, execute: {
-                self.ref.child("Clubs").child(self.keyArray[indexPath.row]).removeValue()
-                self.clubsList.remove(at: indexPath.row)
-                tableView.reloadData()
-                self.keyArray = []
-            })
+            presentDeletionFailsafe(indexPath: indexPath)
         }
     }
 
@@ -102,6 +95,29 @@ class manageClubsMainscreen: UIViewController, UITableViewDelegate, UITableViewD
                 }
             })
 
+    }
+
+    func presentDeletionFailsafe(indexPath: IndexPath) {
+        let alert = UIAlertController(title: nil, message: "Are you sure you'd like to delete your club?", preferredStyle: .alert)
+
+        // yes action
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            self.getAllKeys()
+            let when = DispatchTime.now() + 1
+            DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                self.ref.child("Clubs").child(self.keyArray[indexPath.row]).removeValue()
+                self.clubsList.remove(at: indexPath.row)
+                self.tableView.reloadData()
+                self.keyArray = []
+            })
+        }
+
+        alert.addAction(yesAction)
+
+        // cancel action
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        present(alert, animated: true, completion: nil)
     }
 
 
