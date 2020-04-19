@@ -39,6 +39,7 @@ class makeClubViewController: UIViewController, UITextViewDelegate{
         //generates unique club ID from current time in millisecs
         let clubId = Int(NSDate.timeIntervalSinceReferenceDate * 1000)
         
+        
         if clubName != ""  && description != "" && signUpLink != "" {
             self.ref.child("Clubs").childByAutoId().setValue([ "Club Id" : clubId, "Id" : userId,"Club Name" : clubName!, "Club Description" : description!, "Club Sign Up Link" : signUpLink, "School Code" : schoolCode]){ (error, ref) -> Void in
                 self.showAlert(message: "The club has been added", title: "Success")

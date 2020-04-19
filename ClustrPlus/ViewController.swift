@@ -8,51 +8,37 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
+    var schoolCode: String = ""
+    
+    
     @IBAction func memberPressed(_ sender: Any) {
-         var code = schoolCode.text
-               if code != ""{
-                   performSegue(withIdentifier: "memberSegue", sender: self)
-               }
-               else{
-                   self.showAlert(message: "Please enter your school code", title: "Error")
-               }
+        performSegue(withIdentifier: "memberSegue", sender: self)
+               
     }
     
-    func showAlert(message : String, title : String){
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
-        
-        alertController.addAction(defaultAction)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
     
     @IBAction func adminPressed(_ sender: Any) {
-        var code = schoolCode.text
-        if code != ""{
+     
             performSegue(withIdentifier: "loginSegue", sender: self)
-        }
-        else{
-            self.showAlert(message: "Please enter your school code", title: "Error")
-        }
-        
     }
     
     
-    @IBOutlet weak var schoolCode: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("school code is" + schoolCode)
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSegue"{
             let loginView = segue.destination as? clubLoginPage
-            loginView!.schoolCode = schoolCode.text!
+            loginView!.schoolCode = self.schoolCode
         }else if segue.identifier == "memberSegue"{
             let clubView = segue.destination as? memberBrowseMainscreen
-            clubView!.schoolCode = schoolCode.text!
+            clubView!.schoolCode = self.schoolCode
         }
     }
 

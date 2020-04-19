@@ -55,7 +55,7 @@ class memberBrowseMainscreen: UIViewController, UITableViewDelegate, UITableView
             self.clubsList = newClubs
             self.tableView.reloadData()
         })
-
+        print("member school code:" + schoolCode)
     }
     
  
