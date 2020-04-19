@@ -21,6 +21,8 @@
 		D6183F10242EDBD7004034EC /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183F0F242EDBD7004034EC /* Club.swift */; };
 		D62662B42447EB6B00C301BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62662B32447EB6B00C301BE /* User.swift */; };
 		D62662B6244CC6DA00C301BE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62662B5244CC6DA00C301BE /* FirstViewController.swift */; };
+		D62662B8244CD5DD00C301BE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D62662B7244CD5DC00C301BE /* logo.png */; };
+		D62662BA244CD74E00C301BE /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62662B9244CD74E00C301BE /* EventViewController.swift */; };
 		D62977DF24288285000C25A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977DE24288285000C25A1 /* AppDelegate.swift */; };
 		D62977E124288285000C25A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977E024288285000C25A1 /* SceneDelegate.swift */; };
 		D62977E324288285000C25A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977E224288285000C25A1 /* ViewController.swift */; };
@@ -75,6 +77,8 @@
 		D6183F0F242EDBD7004034EC /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		D62662B32447EB6B00C301BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D62662B5244CC6DA00C301BE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D62662B7244CD5DC00C301BE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D62662B9244CD74E00C301BE /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		D62977DB24288285000C25A1 /* ClustrPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClustrPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62977DE24288285000C25A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D62977E024288285000C25A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		42DBAC49242B14F40083576E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D62662B7244CD5DC00C301BE /* logo.png */,
 				D6EE2FE92429789D00A8BE00 /* Screen Shot 2020-03-23 at 4.06.56 PM.png */,
 				D6EE2FE72429703800A8BE00 /* Screen Shot 2020-03-23 at 3.30.43 PM.png */,
 			);
@@ -193,6 +198,7 @@
 				D62977E024288285000C25A1 /* SceneDelegate.swift */,
 				D62977E224288285000C25A1 /* ViewController.swift */,
 				D62977E424288285000C25A1 /* Main.storyboard */,
+				D62662B9244CD74E00C301BE /* EventViewController.swift */,
 				D62662B5244CC6DA00C301BE /* FirstViewController.swift */,
 				D600500824357B59007DCE3C /* EventCellTableViewCell.swift */,
 				D600500624356ED8007DCE3C /* EditClubViewController.swift */,
@@ -352,6 +358,7 @@
 				D62977EB24288288000C25A1 /* Assets.xcassets in Resources */,
 				D6EE2FE82429703800A8BE00 /* Screen Shot 2020-03-23 at 3.30.43 PM.png in Resources */,
 				D62977E624288285000C25A1 /* Main.storyboard in Resources */,
+				D62662B8244CD5DD00C301BE /* logo.png in Resources */,
 				D6EE2FEA2429789D00A8BE00 /* Screen Shot 2020-03-23 at 4.06.56 PM.png in Resources */,
 				AF514F08242EC184004DBC6C /* GoogleService-Info.plist in Resources */,
 			);
@@ -492,6 +499,7 @@
 				D629781424288A2C000C25A1 /* clubSignUpForAcct.swift in Sources */,
 				D62662B42447EB6B00C301BE /* User.swift in Sources */,
 				D62977DF24288285000C25A1 /* AppDelegate.swift in Sources */,
+				D62662BA244CD74E00C301BE /* EventViewController.swift in Sources */,
 				D6CC1F9224312C4B00B172BB /* ClubDetailsAndEditViewController.swift in Sources */,
 				D62978122428893A000C25A1 /* clubLoginPage.swift in Sources */,
 				D629781824288B51000C25A1 /* memberBrowseMainscreen.swift in Sources */,

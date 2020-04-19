@@ -14,6 +14,7 @@ class Update{
     var title: String = ""
     var update: String = ""
     
+    
     init(clubId: Int, title: String, update: String) {
         self.ref = nil
         self.clubId = clubId

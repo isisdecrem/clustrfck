@@ -10,7 +10,8 @@ import UIKit
 import Firebase
 
 class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
+    
+    
     var events: [Event] = []
     var updates: [Update] = []
     var ref: DatabaseReference!
@@ -155,7 +156,22 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
             
         }
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if scheduleState == true{
+            if let cell = sender as? EventCellTableViewCell{
+                let viewUpdate = segue.destination as? EventViewController
+                viewUpdate?.event = events[((cell.indexPath?.section)!)]
+            }
+        }
+        else{
+            if let cell = sender as? EventCellTableViewCell{
+                let viewUpdate = segue.destination as? EventViewController
+                viewUpdate?.update = updates[((cell.indexPath?.section)!)]
+            }
+        }
+        
+    }
 
 
 
