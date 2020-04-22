@@ -18,6 +18,7 @@ class Event{
     var location: String = ""
     var extra: String = ""
     
+    
     init(clubId: Int, title: String, date: String, time: String, location: String, extra: String) {
         self.ref = nil
         self.clubId = clubId

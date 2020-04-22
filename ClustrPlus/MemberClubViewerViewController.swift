@@ -11,6 +11,8 @@ import Firebase
 
 class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+
+
     
     var events: [Event] = []
     var updates: [Update] = []
@@ -63,6 +65,9 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
   
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var clubName: UILabel!
+    
+    @IBOutlet weak var datePosted: UILabel!
+    
     
     @IBOutlet weak var clubLink: UILabel!
     

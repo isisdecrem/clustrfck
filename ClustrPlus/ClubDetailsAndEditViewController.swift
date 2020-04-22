@@ -10,6 +10,11 @@ import UIKit
 import Firebase
 
 class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditClubViewControllerDelegate {
+    
+    
+   
+    
+    
     func finishEditing(club: Club) {
         clubName.text = club.name
         clubLink.text = club.signUpLink
@@ -66,6 +71,7 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var tableView: UITableView!
     
     
+  
     @IBOutlet weak var clubName: UILabel!
     @IBOutlet weak var clubLink: UILabel!
     
