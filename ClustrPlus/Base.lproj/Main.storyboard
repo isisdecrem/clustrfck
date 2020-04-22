@@ -958,6 +958,7 @@
                                             <outlet property="Description" destination="Eu7-1n-r6P" id="vcP-sy-wcq"/>
                                             <outlet property="Location" destination="FhR-8Z-Y7o" id="euf-Qm-YzW"/>
                                             <outlet property="Time" destination="XDQ-o5-QhO" id="d30-wc-3Zd"/>
+                                            <outlet property="datePosted" destination="R3A-np-mKs" id="eAg-cD-hvA"/>
                                             <outlet property="title" destination="SaS-oV-eGz" id="nfD-b6-ksw"/>
                                         </connections>
                                     </tableViewCell>
@@ -1297,6 +1298,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Ado-hh-EYg"/>
         <segue reference="RNj-dx-CYJ"/>
         <segue reference="r92-pl-fh3"/>
         <segue reference="M5g-hZ-Vtn"/>
