@@ -11,10 +11,19 @@ import UIKit
 class EventViewController: UIViewController {
     
     
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel:
+    UILabel!
+    
+    
     var event: Event?
     var update: Update?
+    var club: Club?
+    
     
   
+    @IBOutlet weak var clubName: UILabel!
     
     @IBOutlet weak var name: UILabel!
     
@@ -32,6 +41,7 @@ class EventViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        clubName.text = club?.name
         
         if event != nil{
             name.text = event?.title
@@ -47,6 +57,9 @@ class EventViewController: UIViewController {
             time.isHidden = true
             date.isHidden = true
             location.isHidden = true
+            timeLabel.isHidden = true
+            dateLabel.isHidden = true
+            locationLabel.isHidden = true
             
             
         }

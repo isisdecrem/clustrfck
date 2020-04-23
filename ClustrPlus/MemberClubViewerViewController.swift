@@ -167,12 +167,14 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
             if let cell = sender as? EventCellTableViewCell{
                 let viewUpdate = segue.destination as? EventViewController
                 viewUpdate?.event = events[((cell.indexPath?.section)!)]
+                viewUpdate?.club = club
             }
         }
         else{
             if let cell = sender as? EventCellTableViewCell{
                 let viewUpdate = segue.destination as? EventViewController
                 viewUpdate?.update = updates[((cell.indexPath?.section)!)]
+                viewUpdate?.club = club
             }
         }
         
