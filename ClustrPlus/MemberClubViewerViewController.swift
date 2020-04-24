@@ -35,28 +35,44 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
         if scheduleState == true {
             print("I am here")
             cell.title.text = events[indexPath.section].title
-            cell.Time.text = events[indexPath.section].time
-            cell.Date.text = events[indexPath.section].date
-            cell.Location.text = events[indexPath.section].location
+            cell.title.textColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
             cell.Description.text = events[indexPath.section].extra
-            cell.Time.isHidden = false
-            cell.Location.isHidden = false
-            cell.Date.isHidden = false
+            cell.Description.textColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
             cell.indexPath = indexPath
+            cell.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.datePosted.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+            cell.layer.borderColor = #colorLiteral(red: 0.9334868789, green: 0.7754582167, blue: 0.5167602897, alpha: 1)
         }else{
       
             cell.title.text = updates[indexPath.section].title
             cell.Description.text = updates[indexPath.section].update
-            cell.Time.isHidden = true
-            cell.Location.isHidden = true
-            cell.Date.isHidden = true
-            cell.indexPath = indexPath
+            cell.backgroundColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
+            cell.title.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.Description.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.datePosted.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
         
+        
+        
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
+        tableView.rowHeight = 200
         return cell
         
     }
-    
+    // Set the spacing between sections
+       func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+           return 15
+       }
+
+       // Make the background color show through
+       func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+           let headerView = UIView()
+           headerView.backgroundColor = UIColor.clear
+           return headerView
+       }
     
     
 

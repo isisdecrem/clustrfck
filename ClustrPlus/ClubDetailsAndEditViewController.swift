@@ -42,22 +42,13 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
         if scheduleState == true {
             print("I am here")
             cell.title.text = events[indexPath.section].title
-            cell.Time.text = events[indexPath.section].time
-            cell.Date.text = events[indexPath.section].date
-            cell.Location.text = events[indexPath.section].location
             cell.Description.text = events[indexPath.section].extra
-            cell.Time.isHidden = false
-            cell.Location.isHidden = false
-            cell.Date.isHidden = false
             cell.indexPath = indexPath
         }else{
       
             cell.title.text = updates[indexPath.section].title
             cell.Description.text = updates[indexPath.section].update
-            cell.Time.isHidden = true
-            cell.Location.isHidden = true
-            cell.Date.isHidden = true
-            cell.indexPath = indexPath
+                        cell.indexPath = indexPath
         }
         
         return cell

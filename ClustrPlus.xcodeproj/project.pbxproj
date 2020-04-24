@@ -24,6 +24,7 @@
 		D62662B6244CC6DA00C301BE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62662B5244CC6DA00C301BE /* FirstViewController.swift */; };
 		D62662B8244CD5DD00C301BE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D62662B7244CD5DC00C301BE /* logo.png */; };
 		D62662BA244CD74E00C301BE /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62662B9244CD74E00C301BE /* EventViewController.swift */; };
+		D62662BC2453747A00C301BE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62662BB2453747A00C301BE /* Color.swift */; };
 		D62977DF24288285000C25A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977DE24288285000C25A1 /* AppDelegate.swift */; };
 		D62977E124288285000C25A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977E024288285000C25A1 /* SceneDelegate.swift */; };
 		D62977E324288285000C25A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62977E224288285000C25A1 /* ViewController.swift */; };
@@ -504,6 +505,7 @@
 		D62662B5244CC6DA00C301BE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D62662B7244CD5DC00C301BE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D62662B9244CD74E00C301BE /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		D62662BB2453747A00C301BE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D62977DB24288285000C25A1 /* ClustrPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClustrPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62977DE24288285000C25A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D62977E024288285000C25A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1045,6 +1047,7 @@
 				3C5015CA243FC46D00D449FD /* CreateNewUpdateViewController.swift */,
 				42DBAC49242B14F40083576E /* Images */,
 				D629781724288B51000C25A1 /* memberBrowseMainscreen.swift */,
+				D62662BB2453747A00C301BE /* Color.swift */,
 				D629781524288AAA000C25A1 /* manageClubsMainscreen.swift */,
 				D629781324288A2C000C25A1 /* clubSignUpForAcct.swift */,
 				D62662B32447EB6B00C301BE /* User.swift */,
@@ -1326,6 +1329,7 @@
 			files = (
 				D62977E924288285000C25A1 /* ClustrPlus.xcdatamodeld in Sources */,
 				D62977E324288285000C25A1 /* ViewController.swift in Sources */,
+				D62662BC2453747A00C301BE /* Color.swift in Sources */,
 				D600500724356ED8007DCE3C /* EditClubViewController.swift in Sources */,
 				D629781624288AAA000C25A1 /* manageClubsMainscreen.swift in Sources */,
 				D6CC1F9424312FDC00B172BB /* ClubTableViewCell.swift in Sources */,
