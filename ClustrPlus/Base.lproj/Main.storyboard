@@ -115,11 +115,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sc-tD-83D">
-                                <rect key="frame" x="20" y="20" width="34" height="30"/>
+                                <rect key="frame" x="20" y="44" width="34" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="PZS-h0-3Q8" kind="show" id="YFS-Iw-dVs"/>
+                                    <action selector="backPressed:" destination="Kt3-4x-5Td" eventType="touchUpInside" id="qQE-ag-vQA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,6 +134,7 @@
                         <outlet property="scheduleB" destination="pCV-CS-fAA" id="TgD-N0-dbe"/>
                         <outlet property="tableView" destination="ZsV-XR-Lt0" id="R09-7G-e4K"/>
                         <outlet property="updateB" destination="r8m-oO-NEs" id="zO8-aZ-NmI"/>
+                        <segue destination="PZS-h0-3Q8" kind="show" identifier="memberBackToBrowseSegue" id="KoF-AL-QuS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gj0-3s-MnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -247,7 +248,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpd-hs-0os">
-                                <rect key="frame" x="49" y="150" width="165" height="21"/>
+                                <rect key="frame" x="49" y="150" width="306" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Club Name">
@@ -260,12 +261,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date posted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMU-cp-gVJ">
-                                <rect key="frame" x="49" y="189" width="93" height="20"/>
+                                <rect key="frame" x="49" y="189" width="282" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-J2-PiL">
+                                <rect key="frame" x="26" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Kt3-4x-5Td" kind="show" id="e9x-1s-aHD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Exs-aq-5X2"/>
@@ -276,6 +285,7 @@
                         <outlet property="clubName" destination="Tpd-hs-0os" id="5Xl-kY-8ll"/>
                         <outlet property="date" destination="a2j-LU-1V3" id="BkS-eD-ksG"/>
                         <outlet property="dateLabel" destination="oXj-aP-5fC" id="vp1-Sw-Eta"/>
+                        <outlet property="datePosted" destination="RMU-cp-gVJ" id="qPK-ib-e2G"/>
                         <outlet property="des" destination="jjQ-QV-AJe" id="m2R-BA-SxK"/>
                         <outlet property="location" destination="FgQ-oS-W7r" id="9iB-KL-epb"/>
                         <outlet property="locationLabel" destination="6b4-Be-qeD" id="kGl-Px-g7s"/>
@@ -338,7 +348,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="clubNameLabel" destination="qco-f0-MFd" id="hAv-QR-WfA"/>
-                                            <segue destination="Kt3-4x-5Td" kind="show" id="msV-ZU-CEb"/>
+                                            <segue destination="Kt3-4x-5Td" kind="show" identifier="memberBackToBrowseSegue" id="msV-ZU-CEb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -348,11 +358,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-HI-H2H">
-                                <rect key="frame" x="346" y="20" width="48" height="30"/>
+                                <rect key="frame" x="346" y="44" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <segue destination="nzQ-9s-lMO" kind="show" id="ggm-Yf-tac"/>
+                                    <segue destination="nzQ-9s-lMO" kind="show" id="3gZ-BV-aEx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -390,10 +400,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-03-23 at 3.30.43 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="qwW-rp-khi">
-                                <rect key="frame" x="0.0" y="98" width="414" height="197"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="197"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWD-Fq-tLD">
-                                <rect key="frame" x="30" y="305" width="354" height="34.5"/>
+                                <rect key="frame" x="30" y="261" width="354" height="34.5"/>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.72156862745098038" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="I am a Club Admin">
@@ -416,7 +426,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c8u-FU-NWg">
-                                <rect key="frame" x="30" y="349.5" width="354" height="34.5"/>
+                                <rect key="frame" x="30" y="305.5" width="354" height="34.5"/>
                                 <color key="backgroundColor" red="0.95854586360000005" green="0.72050601240000001" blue="0.41138124469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
@@ -472,7 +482,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjg-N5-vob">
-                                <rect key="frame" x="45" y="128" width="94.5" height="40"/>
+                                <rect key="frame" x="45" y="84" width="94.5" height="40"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Log in">
                                         <attributes>
@@ -485,7 +495,7 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-bY-CTh">
-                                <rect key="frame" x="45" y="188" width="324" height="22"/>
+                                <rect key="frame" x="45" y="144" width="324" height="22"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -495,12 +505,12 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKH-0d-P6t">
-                                <rect key="frame" x="45" y="230" width="324" height="21"/>
+                                <rect key="frame" x="45" y="186" width="324" height="21"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxj-b8-1TZ">
-                                <rect key="frame" x="45" y="345" width="324" height="35"/>
+                                <rect key="frame" x="45" y="301" width="324" height="35"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.72156862745098038" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -515,7 +525,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpX-pb-E04">
-                                <rect key="frame" x="45" y="400" width="324" height="35"/>
+                                <rect key="frame" x="45" y="356" width="324" height="35"/>
                                 <color key="backgroundColor" red="0.95854586360000005" green="0.72050601240000001" blue="0.41138124469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -566,8 +576,8 @@
                     <connections>
                         <outlet property="email" destination="Bkx-bY-CTh" id="9Wr-WG-Jkk"/>
                         <outlet property="password" destination="NKH-0d-P6t" id="pyC-xx-0V9"/>
-                        <segue destination="kft-9v-tTE" kind="show" identifier="loginSegue" id="RNj-dx-CYJ"/>
                         <segue destination="3Wi-N1-NgU" kind="show" identifier="signInSegue" id="36g-0i-gAv"/>
+                        <segue destination="3Az-86-k7Y" kind="show" identifier="loginSegue" id="HG6-yQ-itC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXC-wt-gAw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -622,7 +632,7 @@
                                                         <constraint firstAttribute="width" constant="349" id="JZn-cy-hTJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
-                                                    <color key="textColor" red="0.9505392909" green="0.72200465199999997" blue="0.39393228289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -643,6 +653,21 @@
                                     <outlet property="delegate" destination="3Az-86-k7Y" id="jRV-nO-Pr6"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QO-tl-EtV">
+                                <rect key="frame" x="346" y="44" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <segue destination="nzQ-9s-lMO" kind="show" id="0OG-jb-nZV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRD-uP-Cce">
+                                <rect key="frame" x="358" y="111" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="8VP-od-LHH" kind="show" id="Dvk-nz-NFj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="X6I-xt-PSs"/>
@@ -654,11 +679,7 @@
                                 <segue destination="nzQ-9s-lMO" kind="show" id="cIv-Dn-bLA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add a club" id="4PO-Lh-Mze">
-                            <connections>
-                                <segue destination="8VP-od-LHH" kind="show" id="ulk-nY-rvp"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add a club" id="4PO-Lh-Mze"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PtF-lW-wzu" id="3Y5-cc-m01"/>
@@ -731,7 +752,6 @@
                                 <state key="normal" title="Button" image="Done Button"/>
                                 <connections>
                                     <action selector="savePressed:" destination="8VP-od-LHH" eventType="touchUpInside" id="SbW-Rl-nQI"/>
-                                    <segue destination="kft-9v-tTE" kind="show" id="pkM-tL-1mc"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Man-pj-PWM">
@@ -740,6 +760,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTB-P0-hvW">
+                                <rect key="frame" x="356" y="44" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <segue destination="3Az-86-k7Y" kind="show" id="vNc-9J-P1Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Describe the club" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wI-7k-3Mf">
+                                <rect key="frame" x="33" y="305" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QTa-O7-2Gp"/>
@@ -1011,11 +1046,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezI-cc-JWU">
-                                <rect key="frame" x="352" y="44" width="34" height="30"/>
+                                <rect key="frame" x="23" y="44" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="3Az-86-k7Y" kind="showDetail" id="tDs-5t-46V"/>
+                                    <segue destination="3Az-86-k7Y" kind="show" id="sWl-Ka-Omi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1024,7 +1059,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YU2-0k-tdo">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Okv-ys-wuf"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Okv-ys-wuf">
+                            <connections>
+                                <segue destination="3Az-86-k7Y" kind="show" id="ery-Se-7oj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="4nJ-ZV-9sh">
                             <connections>
                                 <segue destination="2ZO-cL-LZa" kind="show" identifier="toEdit" id="afM-xh-FLC"/>
@@ -1110,14 +1149,6 @@
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <segue destination="hc8-uE-ZG2" kind="show" id="exz-br-vqA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgX-ri-Ypl">
-                                <rect key="frame" x="26" y="44" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="hc8-uE-ZG2" kind="show" id="yUD-en-zJ6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1213,7 +1244,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9x-9G-wkB">
                                 <rect key="frame" x="20" y="44" width="77" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Back Button 2"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="close" destination="3Wi-N1-NgU" eventType="touchUpInside" id="75Z-sm-lLn"/>
                                     <action selector="close" destination="B3C-Iw-07z" eventType="touchUpInside" id="vve-yi-Pzs"/>
@@ -1274,63 +1307,22 @@
                         <outlet property="confirmPwField" destination="Vbn-pg-Fei" id="Lty-Vt-pbm"/>
                         <outlet property="emailField" destination="vou-H3-REm" id="fQf-Q1-hBH"/>
                         <outlet property="pwField" destination="sUd-Yj-Dim" id="WfX-Br-r7R"/>
-                        <segue destination="kft-9v-tTE" kind="show" identifier="signUpSegue" id="lhg-Ab-hsw"/>
+                        <segue destination="3Az-86-k7Y" kind="show" identifier="signUpSegue" id="agu-ga-lTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia4-Tv-Xoq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860.86956521739137" y="-573.21428571428567"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="MAS-jv-ZBs">
-            <objects>
-                <navigationController storyboardIdentifier="NavControl" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="zUi-35-7Iz" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="sgd-2f-qDo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6ag-x3-0DE">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Ra-bb-V2v"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kNS-UC-R3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="995-zX-iw2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="kft-9v-tTE" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="IlH-L6-9a2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9sN-pS-Ena">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3Az-86-k7Y" kind="relationship" relationship="rootViewController" id="KPo-Lg-Zmj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="395-bd-9Dl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2784.057971014493" y="127.90178571428571"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="afM-xh-FLC"/>
-        <segue reference="pkM-tL-1mc"/>
-        <segue reference="kQ1-qF-MPg"/>
-        <segue reference="KLv-MR-OM3"/>
-        <segue reference="tDs-5t-46V"/>
-        <segue reference="1Ra-bb-V2v"/>
-        <segue reference="YFS-Iw-dVs"/>
+        <segue reference="cIv-Dn-bLA"/>
+        <segue reference="a8P-MQ-HBC"/>
+        <segue reference="vNc-9J-P1Y"/>
+        <segue reference="RtE-EZ-bg6"/>
+        <segue reference="msV-ZU-CEb"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Back Button 2" width="154" height="50"/>
         <image name="Done Button" width="147" height="40"/>
         <image name="New Schedule" width="557" height="72"/>
         <image name="Schedule Selected" width="896" height="296"/>

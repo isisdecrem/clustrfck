@@ -10,6 +10,7 @@ import UIKit
 
 class EventViewController: UIViewController {
     
+    @IBOutlet weak var datePosted: UILabel!
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -44,6 +45,7 @@ class EventViewController: UIViewController {
         clubName.text = club?.name
         
         if event != nil{
+            datePosted.isHidden = true
             name.text = event?.title
             date.text = event?.date
             time.text = event?.time
@@ -52,6 +54,8 @@ class EventViewController: UIViewController {
         }
         
         else if update != nil{
+            datePosted.isHidden = false
+            datePosted.text = update?.datePosted
             name.text = update?.title
             des.text = update?.update
             time.isHidden = true

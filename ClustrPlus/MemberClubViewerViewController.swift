@@ -85,7 +85,13 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var clubName: UILabel!
     
-    @IBOutlet weak var datePosted: UILabel!
+    
+    
+   
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "memberBackToBrowseSegue", sender: self)
+    }
     
     
     @IBOutlet weak var clubLink: UILabel!
@@ -182,7 +188,11 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if scheduleState == true{
+        if segue.identifier == "memberBackToBrowseSegue"{
+            let screen = segue.destination as? memberBrowseMainscreen
+            screen?.schoolCode = club.schoolCode
+        }
+        else if scheduleState == true{
             if let cell = sender as? EventCellTableViewCell{
                 let viewEv = segue.destination as? EventViewController
                 viewEv?.event = events[((cell.indexPath?.section)!)]

@@ -10,6 +10,11 @@ import UIKit
 import Firebase
 
 class manageClubsMainscreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var colors = [Color(name: "lightOrange", uiColor: #colorLiteral(red: 0.9571203589, green: 0.7951588035, blue: 0.5279450417, alpha: 1)),
+           Color(name: "darkOrange", uiColor: #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)),
+           Color(name: "pink", uiColor: #colorLiteral(red: 0.9843137255, green: 0.6431372549, blue: 0.5294117647, alpha: 1)),
+           Color(name: "blue", uiColor: #colorLiteral(red: 0.628890574, green: 0.7048069835, blue: 0.7798258066, alpha: 1)),
+           Color(name: "brown", uiColor: #colorLiteral(red: 0.5000930429, green: 0.411888957, blue: 0.3818208575, alpha: 1))]
     
     @IBAction func logoutButton(_ sender: Any) {
         try! Auth.auth().signOut()
@@ -30,6 +35,15 @@ class manageClubsMainscreen: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! ClubTableViewCell
         cell.clubNameLabel.text = clubsList[indexPath.section].name
         cell.indexPath = indexPath
+        cell.backgroundColor = colors[indexPath.section % 5].uiColor
+           cell.layer.borderColor = UIColor.white.cgColor
+           cell.layer.borderWidth = 1
+           cell.layer.cornerRadius = 8
+           cell.clipsToBounds = true
+           
+        
+           tableView.rowHeight = 150
+
         return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
