@@ -956,13 +956,6 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date posted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-np-mKs">
-                                                    <rect key="frame" x="300" y="21" width="94" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Eu7-1n-r6P" firstAttribute="leading" secondItem="fCo-KM-3Al" secondAttribute="leadingMargin" constant="2" id="BjV-br-kEc"/>
@@ -974,7 +967,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="Description" destination="Eu7-1n-r6P" id="vcP-sy-wcq"/>
-                                            <outlet property="datePosted" destination="R3A-np-mKs" id="eAg-cD-hvA"/>
                                             <outlet property="title" destination="SaS-oV-eGz" id="nfD-b6-ksw"/>
                                         </connections>
                                     </tableViewCell>
