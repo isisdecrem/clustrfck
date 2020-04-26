@@ -42,7 +42,7 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
         let dateString = formatter.string(from: sDate!)
  
         if title != ""  && update != "" {
-            self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Dape Posted" : dateString]){ (error, ref) -> Void in
+            self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Date Posted" : dateString]){ (error, ref) -> Void in
                 self.showAlert(message: "The update has been posted", title: "Success")
             }
         }else{

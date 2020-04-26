@@ -13,15 +13,16 @@ class Update{
     var clubId: Int = 0
     var title: String = ""
     var update: String = ""
-    var date: Int = 0
+    var datePosted: String = ""
     
     
     
-    init(clubId: Int, title: String, update: String) {
+    init(clubId: Int, title: String, update: String, datePosted: String) {
         self.ref = nil
         self.clubId = clubId
         self.title = title
         self.update = update
+        self.datePosted = datePosted
     }
     
     init?(snapshot: DataSnapshot){
@@ -30,7 +31,7 @@ class Update{
             let fClubId = value["Club Id"] as? Int,
             let fTitle = value["Update Title"] as? String,
             let fUpdate = value["Update Info"] as? String,
-            let fDate = value["Date Posted"] as? Int
+            let fDatePosted = value["Date Posted"] as? String
             else {
                 return nil
         }
@@ -38,7 +39,7 @@ class Update{
         self.clubId = fClubId
         self.title = fTitle
         self.update = fUpdate
-        self.date = fDate
+        self.datePosted = fDatePosted
     }
     
     func toAnyObject() -> Any {
@@ -46,7 +47,7 @@ class Update{
             "Club Id" : clubId,
             "Update Title" : title,
             "Update Info" : update,
-            "Date Posted" : date
+            "Date Posted" : datePosted
         
         ]
         
