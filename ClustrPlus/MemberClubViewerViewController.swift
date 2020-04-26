@@ -181,9 +181,9 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if scheduleState == true{
             if let cell = sender as? EventCellTableViewCell{
-                let viewUpdate = segue.destination as? EventViewController
-                viewUpdate?.event = events[((cell.indexPath?.section)!)]
-                viewUpdate?.club = club
+                let viewEv = segue.destination as? EventViewController
+                viewEv?.event = events[((cell.indexPath?.section)!)]
+                viewEv?.club = club
             }
         }
         else{
