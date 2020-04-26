@@ -47,7 +47,7 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
                    cell.Description.textColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
                    cell.indexPath = indexPath
                    cell.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-                   cell.datePosted.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+ //                  cell.datePosted.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
                    cell.layer.borderColor = #colorLiteral(red: 0.9334868789, green: 0.7754582167, blue: 0.5167602897, alpha: 1)
                }else{
              
