@@ -40,18 +40,33 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventCellTableViewCell
         if scheduleState == true {
-            print("I am here")
-            cell.title.text = events[indexPath.section].title
-            cell.Description.text = events[indexPath.section].extra
-            cell.indexPath = indexPath
-        }else{
-      
-            cell.title.text = updates[indexPath.section].title
-            cell.Description.text = updates[indexPath.section].update
-                        cell.indexPath = indexPath
-        }
-        
-        return cell
+                   print("I am here")
+                   cell.title.text = events[indexPath.section].title
+                   cell.title.textColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
+                   cell.Description.text = events[indexPath.section].extra
+                   cell.Description.textColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
+                   cell.indexPath = indexPath
+                   cell.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                   cell.datePosted.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                   cell.layer.borderColor = #colorLiteral(red: 0.9334868789, green: 0.7754582167, blue: 0.5167602897, alpha: 1)
+               }else{
+             
+                   cell.title.text = updates[indexPath.section].title
+                   cell.Description.text = updates[indexPath.section].update
+                   cell.backgroundColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
+                   cell.title.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                   cell.Description.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                   cell.datePosted.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+                   cell.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+               }
+               
+               
+               
+               cell.layer.borderWidth = 1
+               cell.layer.cornerRadius = 8
+               cell.clipsToBounds = true
+               tableView.rowHeight = 200
+               return cell
         
     }
     
