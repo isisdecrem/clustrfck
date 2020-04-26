@@ -32,9 +32,17 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
         
         let title = updateTitle.text
         let update = updateInfo.text
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let dString = formatter.string(from: Date())
+        let sDate = formatter.date(from: dString)
+        formatter.dateFormat = "dd-MMM-yyyy"
+        let dateString = formatter.string(from: sDate!)
  
         if title != ""  && update != "" {
-            self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!]){ (error, ref) -> Void in
+            self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Dape Posted" : dateString]){ (error, ref) -> Void in
                 self.showAlert(message: "The update has been posted", title: "Success")
             }
         }else{

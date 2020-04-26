@@ -13,6 +13,7 @@ class Update{
     var clubId: Int = 0
     var title: String = ""
     var update: String = ""
+    var date: Int = 0
     
     
     
@@ -28,7 +29,8 @@ class Update{
             let value = snapshot.value as? [String: AnyObject],
             let fClubId = value["Club Id"] as? Int,
             let fTitle = value["Update Title"] as? String,
-            let fUpdate = value["Update Info"] as? String
+            let fUpdate = value["Update Info"] as? String,
+            let fDate = value["Date Posted"] as? Int
             else {
                 return nil
         }
@@ -36,13 +38,15 @@ class Update{
         self.clubId = fClubId
         self.title = fTitle
         self.update = fUpdate
+        self.date = fDate
     }
     
     func toAnyObject() -> Any {
         return[
             "Club Id" : clubId,
             "Update Title" : title,
-            "Update Info" : update
+            "Update Info" : update,
+            "Date Posted" : date
         
         ]
         
