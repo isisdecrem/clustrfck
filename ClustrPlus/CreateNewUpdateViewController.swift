@@ -3,7 +3,7 @@
 //  ClustrPlus
 //
 //  Created by Caleb Kim on 4/9/20.
-//  Copyright © 2020 Isis Decrem, Caleb Kim. All rights reserved.
+//  Copyright © 2020 Caleb Kim. All rights reserved.
 //
 
 import UIKit
@@ -33,6 +33,12 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
         let title = updateTitle.text
         let update = updateInfo.text
         
+        let sort = Date()
+
+        let timeInterval = sort.timeIntervalSince1970
+
+        let myInt = Int(timeInterval)
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 
@@ -42,7 +48,7 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
         let dateString = formatter.string(from: sDate!)
  
         if title != ""  && update != "" {
-            self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Date Posted" : dateString]){ (error, ref) -> Void in
+            self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Date Posted" : dateString, "Sort by Date" : myInt]){ (error, ref) -> Void in
                 self.showAlert(message: "The update has been posted", title: "Success")
             }
         }else{
