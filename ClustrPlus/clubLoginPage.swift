@@ -38,6 +38,8 @@ class clubLoginPage: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
+        saveEmail()
+        savePw()
         let emailValue = email.text
         let pwValue = password.text
         
@@ -60,6 +62,8 @@ class clubLoginPage: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForSavedEmail()
+        checkForSavedPw()
 
         // Do any additional setup after loading the view.
     }
@@ -77,6 +81,30 @@ class clubLoginPage: UIViewController, UITextFieldDelegate {
     
     @IBAction func close() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    let defaults = UserDefaults.standard
+    struct Keys {
+        static let email = "email"
+        static let pw = "password"
+    }
+    
+    func saveEmail() {
+        defaults.set(email.text, forKey: Keys.email)
+    }
+    
+    func checkForSavedEmail() {
+        let code = defaults.value(forKey: Keys.email) as? String ?? ""
+        email.text = code
+    }
+    
+    func savePw() {
+        defaults.set(password.text, forKey: Keys.pw)
+    }
+    
+    func checkForSavedPw() {
+        let code = defaults.value(forKey: Keys.pw) as? String ?? ""
+        password.text = code
     }
 
 }

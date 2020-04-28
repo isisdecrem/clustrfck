@@ -319,7 +319,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="isr-gM-yIM">
-                                <rect key="frame" x="12" y="135" width="390" height="694"/>
+                                <rect key="frame" x="12" y="184" width="390" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="694" id="Twg-C9-oMy"/>
@@ -1324,9 +1324,9 @@
         <image name="logo.png" width="326" height="254"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cIv-Dn-bLA"/>
+        <segue reference="r92-pl-fh3"/>
         <segue reference="exz-br-vqA"/>
-        <segue reference="ery-Se-7oj"/>
+        <segue reference="HG6-yQ-itC"/>
         <segue reference="RtE-EZ-bg6"/>
         <segue reference="msV-ZU-CEb"/>
     </inferredMetricsTieBreakers>

@@ -24,7 +24,7 @@ class FirstViewController: UIViewController {
         
         if schoolCode.text != nil {
             saveCode()
-             performSegue(withIdentifier: "firstSegue", sender: self)
+            performSegue(withIdentifier: "firstSegue", sender: self)
         }
         else{
             self.showAlert(message: "Please enter your school code", title: "Error")

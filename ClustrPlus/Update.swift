@@ -2,8 +2,8 @@
 //  Update.swift
 //  ClustrPlus
 //
-//  Created by Caleb Kim on 4/6/20.
-//  Copyright © 2020 Caleb Kim. All rights reserved.
+//  Created by Isis Decrem on 4/6/20.
+//  Copyright © 2020 Isis Decrem. All rights reserved.
 //
 
 import Foundation
