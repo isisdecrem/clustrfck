@@ -23,6 +23,7 @@ class FirstViewController: UIViewController {
     @IBAction func pressed(_ sender: Any) {
         
         if schoolCode.text != nil {
+            saveCode()
              performSegue(withIdentifier: "firstSegue", sender: self)
         }
         else{
@@ -34,6 +35,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var schoolCode: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForSavedCode()
 
         // Do any additional setup after loading the view.
     }
@@ -44,8 +46,21 @@ class FirstViewController: UIViewController {
             second!.schoolCode = schoolCode.text!
         }
     }
-
-
+    
+    // Save School Code
+    let defaults = UserDefaults.standard
+    struct Keys {
+        static let schoolCode = "schoolCode"
+    }
+    
+    func saveCode() {
+        defaults.set(schoolCode.text, forKey: Keys.schoolCode)
+    }
+    
+    func checkForSavedCode() {
+        let code = defaults.value(forKey: Keys.schoolCode) as? String ?? ""
+        schoolCode.text = code
+    }
 
 
 }
