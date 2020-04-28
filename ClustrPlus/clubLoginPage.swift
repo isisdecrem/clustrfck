@@ -83,6 +83,8 @@ class clubLoginPage: UIViewController, UITextFieldDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    // Save user & password
     let defaults = UserDefaults.standard
     struct Keys {
         static let email = "email"
