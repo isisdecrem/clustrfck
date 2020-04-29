@@ -42,11 +42,15 @@ class CreateNewEventViewController: UIViewController{
         let time = eventTime.text
         let location = eventLocation.text
         let extra = eventExtra.text ?? ""
- 
-        if title != ""  && date != "" && time != "" && location != "" {
+        
+        if title!.count > 15 && date!.count > 15 && time!.count > 15 && location!.count > 15{
+            showAlert(message: "Text is too long. 15 characters max.", title: "Error")
+            
+        }else if title != ""  && date != "" && time != "" && location != "" {
             self.ref.child("Events").childByAutoId().setValue(["Club Id" : clubId ,"Event Title" : title, "Event Date" : date,"Event Time" : time!, "Event Location" : location!, "Event Extra" : extra]){ (error, ref) -> Void in
                 self.showAlert(message: "The event has been added", title: "Success")
             }
+            
         }else{
             showAlert(message: "Fill out the form please.", title: "Error")
         }

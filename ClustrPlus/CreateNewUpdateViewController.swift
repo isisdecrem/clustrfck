@@ -47,7 +47,12 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
         formatter.dateFormat = "dd-MMM-yyyy"
         let dateString = formatter.string(from: sDate!)
  
-        if title != ""  && update != "" {
+        if title!.count > 25 {
+            showAlert(message: "Title text is too long. 25 characters max.", title: "Error")
+                   
+        }else if update!.count > 150{
+            showAlert(message: "Description text is too long. 150 characters max.", title: "Error")
+        }else if title != ""  && update != "" {
             self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Date Posted" : dateString, "Sort by Date" : myInt]){ (error, ref) -> Void in
                 self.showAlert(message: "The update has been posted", title: "Success")
             }
