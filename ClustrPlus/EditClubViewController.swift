@@ -87,13 +87,14 @@ class EditClubViewController: UIViewController {
         clubDescription.layer.cornerRadius = 5.0
 
     }
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-              if segue.identifier == "editToClub"{
-                  let screen = segue.destination as? ClubDetailsAndEditViewController
-                  screen?.club = club
-              }
-       }
-       
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//              if segue.identifier == "editToClub"{
+//                  let screen = segue.destination as? manageClubsMainscreen
+//
+//              }
+//       }
+//
+    
 }
 
    
