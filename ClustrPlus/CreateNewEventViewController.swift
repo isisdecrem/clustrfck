@@ -49,7 +49,7 @@ class CreateNewEventViewController: UIViewController{
             
         }else if title != ""  && date != "" && time != "" && location != "" {
             self.ref.child("Events").childByAutoId().setValue(["Club Id" : clubId ,"Event Title" : title, "Event Date" : date,"Event Time" : time!, "Event Location" : location!, "Event Extra" : extra]){ (error, ref) -> Void in
-                self.showAlert(message: "The event has been added", title: "Success")
+                //self.showAlert(message: "The event has been added", title: "Success")
                 self.performSegue(withIdentifier: "newEventToClub", sender: self)
             }
             

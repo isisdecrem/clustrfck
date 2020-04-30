@@ -55,7 +55,7 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
             showAlert(message: "Description text is too long. 150 characters max.", title: "Error")
         }else if title != ""  && update != "" {
             self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Date Posted" : dateString, "Sort by Date" : myInt]){ (error, ref) -> Void in
-                self.showAlert(message: "The update has been posted", title: "Success")
+                //self.showAlert(message: "The update has been posted", title: "Success")
                 self.performSegue(withIdentifier: "newUpdateToClub", sender: self)
             }
         }else{
