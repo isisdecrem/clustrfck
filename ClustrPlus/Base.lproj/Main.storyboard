@@ -857,7 +857,8 @@
                         <outlet property="clubDescription" destination="Oah-2g-1pT" id="ls0-43-jA6"/>
                         <outlet property="clubLink" destination="hV2-HL-iU3" id="hM9-vW-I4y"/>
                         <outlet property="clubName" destination="GK2-SA-0hF" id="5bb-AO-TKP"/>
-                        <segue destination="3Az-86-k7Y" kind="show" identifier="editToClub" id="MID-hK-XfF"/>
+                        <segue destination="3Az-86-k7Y" kind="show" identifier="editToClubs" id="MID-hK-XfF"/>
+                        <segue destination="hc8-uE-ZG2" kind="show" identifier="editToClub" id="pYy-K0-nGM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMN-Wn-YlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1335,7 +1336,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="r92-pl-fh3"/>
-        <segue reference="pt2-va-KVY"/>
+        <segue reference="pYy-K0-nGM"/>
         <segue reference="MID-hK-XfF"/>
         <segue reference="KoF-AL-QuS"/>
         <segue reference="11L-eu-yHk"/>

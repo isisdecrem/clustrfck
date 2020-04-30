@@ -56,7 +56,7 @@ class EditClubViewController: UIViewController {
                                     ,"Club Name" : newName!, "Club Description" : newDescription!, "Club Sign Up Link" : newLink!, "School Code" : self.club?.schoolCode])
                                 self.delegate?.finishEditing(club: Club(clubId: self.club!.clubId, id:  self.club!.id, name: newName!, description: newDescription!, signUpLink: newLink!, schoolCode: self.club!.schoolCode))
                                 //self.showAlert(message: "The club has been updated", title: "Success")
-                                self.performSegue(withIdentifier: "editToClub", sender: self)
+                                self.performSegue(withIdentifier: "editToClubs", sender: self)
 
                                 break
                             }
@@ -87,14 +87,13 @@ class EditClubViewController: UIViewController {
         clubDescription.layer.cornerRadius = 5.0
 
     }
-//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//              if segue.identifier == "editToClub"{
-//                  let screen = segue.destination as? manageClubsMainscreen
-//
-//              }
-//       }
-//
-    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+              if segue.identifier == "editToClub"{
+                  let screen = segue.destination as? manageClubsMainscreen
+                  screen?.club = club
+              }
+       }
+       
 }
 
    
