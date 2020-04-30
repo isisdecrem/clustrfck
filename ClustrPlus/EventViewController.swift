@@ -72,6 +72,16 @@ class EventViewController: UIViewController {
     
     
     
+    @IBAction func backPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "memberBackClubView", sender: self)
+    }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "memberBackClubView"{
+               let screen = segue.destination as? MemberClubViewerViewController
+               screen?.club = club
+           }
+    }
 
 }

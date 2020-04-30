@@ -23,6 +23,7 @@ class CreateNewEventViewController: UIViewController{
     @IBOutlet weak var eventExtra: UITextField!
     
     var clubId: Int = 0
+    var club: Club!
     var ref: DatabaseReference!
     
     func showAlert(message : String, title : String){
@@ -49,6 +50,7 @@ class CreateNewEventViewController: UIViewController{
         }else if title != ""  && date != "" && time != "" && location != "" {
             self.ref.child("Events").childByAutoId().setValue(["Club Id" : clubId ,"Event Title" : title, "Event Date" : date,"Event Time" : time!, "Event Location" : location!, "Event Extra" : extra]){ (error, ref) -> Void in
                 self.showAlert(message: "The event has been added", title: "Success")
+                self.performSegue(withIdentifier: "newEventToClub", sender: self)
             }
             
         }else{
@@ -64,5 +66,15 @@ class CreateNewEventViewController: UIViewController{
     }
     
 
-
+    @IBAction func cancelPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "newEventToClub", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newEventToClub"{
+            let screen = segue.destination as? ClubDetailsAndEditViewController
+            screen?.club = club
+        }
+    }
+    
 }

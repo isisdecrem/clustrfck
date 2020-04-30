@@ -272,7 +272,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="Kt3-4x-5Td" kind="show" id="e9x-1s-aHD"/>
+                                    <action selector="backPressed:" destination="i5g-Le-Tp3" eventType="touchUpInside" id="MRk-Io-rer"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,6 +292,7 @@
                         <outlet property="name" destination="p4x-2f-NDu" id="Kc0-rt-yub"/>
                         <outlet property="time" destination="5gd-kI-0Hp" id="xAN-RN-AuG"/>
                         <outlet property="timeLabel" destination="SZf-Ul-mnk" id="UbG-1n-uy2"/>
+                        <segue destination="Kt3-4x-5Td" kind="show" identifier="memberBackClubView" id="11L-eu-yHk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VT1-iE-cwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -842,7 +843,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="hc8-uE-ZG2" kind="show" id="KLv-MR-OM3"/>
+                                    <action selector="backPressed:" destination="2ZO-cL-LZa" eventType="touchUpInside" id="cKj-6T-tdF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -856,6 +857,7 @@
                         <outlet property="clubDescription" destination="Oah-2g-1pT" id="ls0-43-jA6"/>
                         <outlet property="clubLink" destination="hV2-HL-iU3" id="hM9-vW-I4y"/>
                         <outlet property="clubName" destination="GK2-SA-0hF" id="5bb-AO-TKP"/>
+                        <segue destination="hc8-uE-ZG2" kind="show" identifier="editToClub" id="sEK-79-fpe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMN-Wn-YlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -907,7 +909,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="hc8-uE-ZG2" kind="show" id="M5g-hZ-Vtn"/>
+                                    <action selector="backPressed:" destination="2dg-gh-SZ9" eventType="touchUpInside" id="xLB-Z7-FNn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -918,6 +920,7 @@
                     <connections>
                         <outlet property="updateInfo" destination="d9D-KF-Vci" id="phv-bc-WFh"/>
                         <outlet property="updateTitle" destination="QpC-r8-dLb" id="G59-6D-X56"/>
+                        <segue destination="hc8-uE-ZG2" kind="show" identifier="newUpdateToClub" id="veB-RI-rQi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tM2-4Y-Hlm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1158,7 +1161,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="hc8-uE-ZG2" kind="show" id="exz-br-vqA"/>
+                                    <action selector="cancelPressed:" destination="I3t-wp-NhY" eventType="touchUpInside" id="KBw-dL-oXQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1172,6 +1175,7 @@
                         <outlet property="eventLocation" destination="O8l-P7-rH7" id="cun-YX-DiC"/>
                         <outlet property="eventTime" destination="yKj-Lx-EBT" id="wFR-7H-aim"/>
                         <outlet property="eventTitle" destination="5ma-Ww-3A3" id="kLn-I4-V1e"/>
+                        <segue destination="hc8-uE-ZG2" kind="show" identifier="newEventToClub" id="pt2-va-KVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxc-M0-0yS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1326,12 +1330,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3k9-eZ-zha"/>
         <segue reference="r92-pl-fh3"/>
-        <segue reference="exz-br-vqA"/>
+        <segue reference="pt2-va-KVY"/>
         <segue reference="sWl-Ka-Omi"/>
         <segue reference="KoF-AL-QuS"/>
-        <segue reference="e9x-1s-aHD"/>
+        <segue reference="11L-eu-yHk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Done Button" width="147" height="40"/>

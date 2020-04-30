@@ -16,6 +16,7 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var updateInfo: UITextView!
     
     var clubId: Int = 0
+    var club: Club!
     var ref: DatabaseReference!
     
     func showAlert(message : String, title : String){
@@ -55,6 +56,7 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
         }else if title != ""  && update != "" {
             self.ref.child("Updates").childByAutoId().setValue(["Club Id" : clubId ,"Update Title" : title!, "Update Info" : update!, "Date Posted" : dateString, "Sort by Date" : myInt]){ (error, ref) -> Void in
                 self.showAlert(message: "The update has been posted", title: "Success")
+                self.performSegue(withIdentifier: "newUpdateToClub", sender: self)
             }
         }else{
             showAlert(message: "Fill out the form please.", title: "Error")
@@ -95,6 +97,17 @@ class CreateNewUpdateViewController: UIViewController, UITextViewDelegate{
             textView.text = "Describe your update"
         }
         
+    }
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "newUpdateToClub", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newUpdateToClub"{
+            let screen = segue.destination as? ClubDetailsAndEditViewController
+            screen?.club = club
+        }
     }
     
 

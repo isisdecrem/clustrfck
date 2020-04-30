@@ -12,8 +12,6 @@ import Firebase
 class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditClubViewControllerDelegate {
     
     
-   
-    
     
     func finishEditing(club: Club) {
         clubName.text = club.name
@@ -193,11 +191,13 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
         if segue.identifier == "ShowMakeNewEvent"  {
               let newEvent = segue.destination as? CreateNewEventViewController
             newEvent?.clubId = club.clubId
+            newEvent?.club = club
             scheduleState = true
           }
         else if segue.identifier == "ShowMakeNewUpdate"{
             let newUpdate = segue.destination as? CreateNewUpdateViewController
             newUpdate?.clubId = club.clubId
+            newUpdate?.club = club
             scheduleState = false
         }
         else if segue.identifier == "toEdit"{
