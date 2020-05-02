@@ -89,8 +89,8 @@ class EditClubViewController: UIViewController, UITextFieldDelegate {
     }
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
               if segue.identifier == "editToClub"{
-                  let screen = segue.destination as? manageClubsMainscreen
-                  //screen?.club = club
+                  let screen = segue.destination as? ClubDetailsAndEditViewController
+                  screen?.club = club
               }
        }
     
