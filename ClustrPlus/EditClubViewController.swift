@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class EditClubViewController: UIViewController {
+class EditClubViewController: UIViewController, UITextFieldDelegate {
     var club: Club?
     var ref: DatabaseReference!
     var oldName: String = ""
@@ -93,6 +93,15 @@ class EditClubViewController: UIViewController {
                   //screen?.club = club
               }
        }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
        
 }
 

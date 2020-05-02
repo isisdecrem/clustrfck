@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzQ-9s-lMO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzQ-9s-lMO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -747,7 +747,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PtF-lW-wzu">
-                                <rect key="frame" x="0.0" y="168" width="414" height="694"/>
+                                <rect key="frame" x="0.0" y="168" width="414" height="743"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="184" id="fV6-rd-6B0" customClass="ClubTableViewCell" customModule="ClustrPlus" customModuleProvider="target">
@@ -1715,13 +1715,6 @@
             <point key="canvasLocation" x="860.86956521739137" y="-573.21428571428567"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="kQ1-qF-MPg"/>
-        <segue reference="pt2-va-KVY"/>
-        <segue reference="MID-hK-XfF"/>
-        <segue reference="KoF-AL-QuS"/>
-        <segue reference="msV-ZU-CEb"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Done Button" width="147" height="40"/>
         <image name="New Schedule" width="557" height="72"/>
@@ -1730,4 +1723,11 @@
         <image name="Updates Unselected" width="620" height="238"/>
         <image name="logo.png" width="326" height="254"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kQ1-qF-MPg"/>
+        <segue reference="pt2-va-KVY"/>
+        <segue reference="agu-ga-lTS"/>
+        <segue reference="KoF-AL-QuS"/>
+        <segue reference="msV-ZU-CEb"/>
+    </inferredMetricsTieBreakers>
 </document>

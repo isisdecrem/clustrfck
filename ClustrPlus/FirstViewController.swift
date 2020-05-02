@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITextFieldDelegate {
     
     func showAlert(message : String, title : String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -61,6 +61,14 @@ class FirstViewController: UIViewController {
         let code = defaults.value(forKey: Keys.schoolCode) as? String ?? ""
         schoolCode.text = code
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }

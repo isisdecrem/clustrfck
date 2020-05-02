@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class CreateNewEventViewController: UIViewController{
+class CreateNewEventViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var eventTitle: UITextField!
     
@@ -75,6 +75,15 @@ class CreateNewEventViewController: UIViewController{
             let screen = segue.destination as? ClubDetailsAndEditViewController
             screen?.club = club
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
