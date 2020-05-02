@@ -90,7 +90,7 @@ class EditClubViewController: UIViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
               if segue.identifier == "editToClub"{
                   let screen = segue.destination as? manageClubsMainscreen
-                  screen?.club = club
+                  //screen?.club = club
               }
        }
        
