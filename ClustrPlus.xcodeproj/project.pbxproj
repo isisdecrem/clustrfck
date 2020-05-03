@@ -13,6 +13,7 @@
 		AF514F08242EC184004DBC6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF514F07242EC184004DBC6C /* GoogleService-Info.plist */; };
 		AF829C4B245166610031C18E /* Pods_ClustrPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA71AB3373263EDF1FE6BDD4 /* Pods_ClustrPlus.framework */; };
 		AF829C4C245166610031C18E /* Pods_ClustrPlus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA71AB3373263EDF1FE6BDD4 /* Pods_ClustrPlus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF97E251245F65E40046FF41 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E250245F65E30046FF41 /* logo2.png */; };
 		D60050012432A4F0007DCE3C /* MemberClubViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */; };
 		D60050032435662E007DCE3C /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050022435662E007DCE3C /* CreateNewEventViewController.swift */; };
 		D600500524356951007DCE3C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600500424356951007DCE3C /* Event.swift */; };
@@ -494,6 +495,7 @@
 		AF1417402451635100723D75 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
 		AF1417412451635100723D75 /* libswiftCoreData.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCoreData.tbd; path = usr/lib/swift/libswiftCoreData.tbd; sourceTree = SDKROOT; };
 		AF514F07242EC184004DBC6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF97E250245F65E30046FF41 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberClubViewerViewController.swift; sourceTree = "<group>"; };
 		D60050022435662E007DCE3C /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 		D600500424356951007DCE3C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 		42DBAC49242B14F40083576E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AF97E250245F65E30046FF41 /* logo2.png */,
 				D62662B7244CD5DC00C301BE /* logo.png */,
 				D6EE2FE92429789D00A8BE00 /* Screen Shot 2020-03-23 at 4.06.56 PM.png */,
 				D6EE2FE72429703800A8BE00 /* Screen Shot 2020-03-23 at 3.30.43 PM.png */,
@@ -1200,6 +1203,7 @@
 				D62662B8244CD5DD00C301BE /* logo.png in Resources */,
 				D6EE2FEA2429789D00A8BE00 /* Screen Shot 2020-03-23 at 4.06.56 PM.png in Resources */,
 				AF514F08242EC184004DBC6C /* GoogleService-Info.plist in Resources */,
+				AF97E251245F65E40046FF41 /* logo2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

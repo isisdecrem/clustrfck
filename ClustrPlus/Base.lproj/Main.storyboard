@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzQ-9s-lMO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzQ-9s-lMO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1544,7 +1544,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Don't know what your school code is? Check with your school or visit our website.">
                                         <attributes>
-                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="1" green="0.65490196078431373" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1552,7 +1552,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BS5-Ma-TfS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="BS5-Ma-TfS">
                                 <rect key="frame" x="62" y="113" width="290" height="184"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="184" id="I9V-i5-WfI"/>
@@ -1570,7 +1570,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Enter">
                                             <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="NSColor" red="1" green="0.65490196078431373" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -1582,7 +1582,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.98431372549999996" green="0.64313725489999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WRa-FM-gVg" firstAttribute="bottom" secondItem="eUO-XN-eZm" secondAttribute="bottom" constant="41" id="7mL-B7-Fer"/>
                             <constraint firstItem="QaI-Zq-bX5" firstAttribute="centerX" secondItem="HNY-Pv-6jN" secondAttribute="centerX" id="MYK-7P-mh3"/>
@@ -1715,14 +1715,6 @@
             <point key="canvasLocation" x="860.86956521739137" y="-573.21428571428567"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Done Button" width="147" height="40"/>
-        <image name="New Schedule" width="557" height="72"/>
-        <image name="Schedule Selected" width="896" height="296"/>
-        <image name="Screen Shot 2020-03-23 at 3.30.43 PM.png" width="250" height="197"/>
-        <image name="Updates Unselected" width="620" height="238"/>
-        <image name="logo.png" width="326" height="254"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kQ1-qF-MPg"/>
         <segue reference="pt2-va-KVY"/>
@@ -1730,4 +1722,12 @@
         <segue reference="KoF-AL-QuS"/>
         <segue reference="msV-ZU-CEb"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Done Button" width="147" height="40"/>
+        <image name="New Schedule" width="557" height="72"/>
+        <image name="Schedule Selected" width="896" height="296"/>
+        <image name="Screen Shot 2020-03-23 at 3.30.43 PM.png" width="250" height="197"/>
+        <image name="Updates Unselected" width="620" height="238"/>
+        <image name="logo2.png" width="324" height="252"/>
+    </resources>
 </document>
