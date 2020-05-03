@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("school code is" + schoolCode)
         // Do any additional setup after loading the view.
+        overrideUserInterfaceStyle = .light
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
