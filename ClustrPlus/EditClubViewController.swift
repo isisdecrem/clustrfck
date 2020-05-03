@@ -105,7 +105,7 @@ class EditClubViewController: UIViewController, UITextFieldDelegate {
        
 }
 
-   
+
 
 
 protocol EditClubViewControllerDelegate {

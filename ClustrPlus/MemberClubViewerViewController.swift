@@ -111,7 +111,6 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
                 if let snapshot = child as? DataSnapshot,
                 let event = Event(snapshot: snapshot){
                     if  event.clubId == self.club.clubId{
-                        print("New event added")
                         newEvents.append(event)
                     }
                 }
@@ -130,7 +129,6 @@ class MemberClubViewerViewController: UIViewController, UITableViewDelegate, UIT
                 if let snapshot = child as? DataSnapshot,
                 let update = Update(snapshot: snapshot){
                     if  update.clubId == self.club.clubId{
-                        print("New update posted")
                         newUpdates.append(update)
                     }
                 }
