@@ -14,6 +14,7 @@
 		AF829C4B245166610031C18E /* Pods_ClustrPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA71AB3373263EDF1FE6BDD4 /* Pods_ClustrPlus.framework */; };
 		AF829C4C245166610031C18E /* Pods_ClustrPlus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA71AB3373263EDF1FE6BDD4 /* Pods_ClustrPlus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF97E251245F65E40046FF41 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E250245F65E30046FF41 /* logo2.png */; };
+		AF97E257245F785F0046FF41 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E256245F785F0046FF41 /* AppIcon.png */; };
 		D60050012432A4F0007DCE3C /* MemberClubViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */; };
 		D60050032435662E007DCE3C /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050022435662E007DCE3C /* CreateNewEventViewController.swift */; };
 		D600500524356951007DCE3C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600500424356951007DCE3C /* Event.swift */; };
@@ -496,6 +497,7 @@
 		AF1417412451635100723D75 /* libswiftCoreData.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCoreData.tbd; path = usr/lib/swift/libswiftCoreData.tbd; sourceTree = SDKROOT; };
 		AF514F07242EC184004DBC6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF97E250245F65E30046FF41 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
+		AF97E256245F785F0046FF41 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = Images/AppIcon.png; sourceTree = "<group>"; };
 		D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberClubViewerViewController.swift; sourceTree = "<group>"; };
 		D60050022435662E007DCE3C /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 		D600500424356951007DCE3C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -1058,6 +1060,7 @@
 				D62977EA24288288000C25A1 /* Assets.xcassets */,
 				D62977EC24288288000C25A1 /* LaunchScreen.storyboard */,
 				D62977EF24288288000C25A1 /* Info.plist */,
+				AF97E256245F785F0046FF41 /* AppIcon.png */,
 				D62977E724288285000C25A1 /* ClustrPlus.xcdatamodeld */,
 				AF514F07242EC184004DBC6C /* GoogleService-Info.plist */,
 				D6C95109243C24C000F9499D /* Update.swift */,
@@ -1198,6 +1201,7 @@
 			files = (
 				D62977EE24288288000C25A1 /* LaunchScreen.storyboard in Resources */,
 				D62977EB24288288000C25A1 /* Assets.xcassets in Resources */,
+				AF97E257245F785F0046FF41 /* AppIcon.png in Resources */,
 				D6EE2FE82429703800A8BE00 /* Screen Shot 2020-03-23 at 3.30.43 PM.png in Resources */,
 				D62977E624288285000C25A1 /* Main.storyboard in Resources */,
 				D62662B8244CD5DD00C301BE /* logo.png in Resources */,
