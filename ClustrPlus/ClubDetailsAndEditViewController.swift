@@ -38,7 +38,6 @@ class ClubDetailsAndEditViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventCellTableViewCell
         if scheduleState == true {
-                   print("I am here")
                    cell.title.text = events[indexPath.section].title
                    cell.title.textColor = #colorLiteral(red: 0.9413829446, green: 0.6396328807, blue: 0.3576128483, alpha: 1)
                    cell.Description.text = events[indexPath.section].extra
