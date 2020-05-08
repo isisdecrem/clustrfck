@@ -11,10 +11,12 @@
 		47EBBDF53254CF1F89BC5F65 /* Pods_ClustrPlus_ClustrPlusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE1ED1F33EE8E35827DC57 /* Pods_ClustrPlus_ClustrPlusUITests.framework */; };
 		A24810F589C6FBF10F82CE5F /* Pods_ClustrPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4DF6997561366982A035F5 /* Pods_ClustrPlusTests.framework */; };
 		AF514F08242EC184004DBC6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF514F07242EC184004DBC6C /* GoogleService-Info.plist */; };
+		AF69D9292464FCDE00E9414D /* LaunchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF69D9282464FCDD00E9414D /* LaunchScreen.jpg */; };
 		AF829C4B245166610031C18E /* Pods_ClustrPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA71AB3373263EDF1FE6BDD4 /* Pods_ClustrPlus.framework */; };
 		AF829C4C245166610031C18E /* Pods_ClustrPlus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA71AB3373263EDF1FE6BDD4 /* Pods_ClustrPlus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF97E251245F65E40046FF41 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E250245F65E30046FF41 /* logo2.png */; };
 		AF97E257245F785F0046FF41 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E256245F785F0046FF41 /* AppIcon.png */; };
+		AF97E259246106740046FF41 /* AppIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E258246106730046FF41 /* AppIcon2.png */; };
 		D60050012432A4F0007DCE3C /* MemberClubViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */; };
 		D60050032435662E007DCE3C /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050022435662E007DCE3C /* CreateNewEventViewController.swift */; };
 		D600500524356951007DCE3C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600500424356951007DCE3C /* Event.swift */; };
@@ -496,8 +498,10 @@
 		AF1417402451635100723D75 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
 		AF1417412451635100723D75 /* libswiftCoreData.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCoreData.tbd; path = usr/lib/swift/libswiftCoreData.tbd; sourceTree = SDKROOT; };
 		AF514F07242EC184004DBC6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF69D9282464FCDD00E9414D /* LaunchScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LaunchScreen.jpg; path = Images/LaunchScreen.jpg; sourceTree = "<group>"; };
 		AF97E250245F65E30046FF41 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		AF97E256245F785F0046FF41 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = Images/AppIcon.png; sourceTree = "<group>"; };
+		AF97E258246106730046FF41 /* AppIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon2.png; path = Images/AppIcon2.png; sourceTree = "<group>"; };
 		D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberClubViewerViewController.swift; sourceTree = "<group>"; };
 		D60050022435662E007DCE3C /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 		D600500424356951007DCE3C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -1060,6 +1064,8 @@
 				D62977EA24288288000C25A1 /* Assets.xcassets */,
 				D62977EC24288288000C25A1 /* LaunchScreen.storyboard */,
 				D62977EF24288288000C25A1 /* Info.plist */,
+				AF69D9282464FCDD00E9414D /* LaunchScreen.jpg */,
+				AF97E258246106730046FF41 /* AppIcon2.png */,
 				AF97E256245F785F0046FF41 /* AppIcon.png */,
 				D62977E724288285000C25A1 /* ClustrPlus.xcdatamodeld */,
 				AF514F07242EC184004DBC6C /* GoogleService-Info.plist */,
@@ -1200,6 +1206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62977EE24288288000C25A1 /* LaunchScreen.storyboard in Resources */,
+				AF97E259246106740046FF41 /* AppIcon2.png in Resources */,
+				AF69D9292464FCDE00E9414D /* LaunchScreen.jpg in Resources */,
 				D62977EB24288288000C25A1 /* Assets.xcassets in Resources */,
 				AF97E257245F785F0046FF41 /* AppIcon.png in Resources */,
 				D6EE2FE82429703800A8BE00 /* Screen Shot 2020-03-23 at 3.30.43 PM.png in Resources */,
