@@ -17,6 +17,7 @@
 		AF97E251245F65E40046FF41 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E250245F65E30046FF41 /* logo2.png */; };
 		AF97E257245F785F0046FF41 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E256245F785F0046FF41 /* AppIcon.png */; };
 		AF97E259246106740046FF41 /* AppIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF97E258246106730046FF41 /* AppIcon2.png */; };
+		AFCF52FD249EC4890071AA80 /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFCF52FC249EC4890071AA80 /* ItunesArtwork@2x.png */; };
 		D60050012432A4F0007DCE3C /* MemberClubViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */; };
 		D60050032435662E007DCE3C /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60050022435662E007DCE3C /* CreateNewEventViewController.swift */; };
 		D600500524356951007DCE3C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D600500424356951007DCE3C /* Event.swift */; };
@@ -502,6 +503,7 @@
 		AF97E250245F65E30046FF41 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		AF97E256245F785F0046FF41 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = Images/AppIcon.png; sourceTree = "<group>"; };
 		AF97E258246106730046FF41 /* AppIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon2.png; path = Images/AppIcon2.png; sourceTree = "<group>"; };
+		AFCF52FC249EC4890071AA80 /* ItunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ItunesArtwork@2x.png"; path = "../../../Downloads/AppIcon-1.appiconset/ItunesArtwork@2x.png"; sourceTree = "<group>"; };
 		D60050002432A4F0007DCE3C /* MemberClubViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberClubViewerViewController.swift; sourceTree = "<group>"; };
 		D60050022435662E007DCE3C /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 		D600500424356951007DCE3C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -1067,6 +1069,7 @@
 				AF69D9282464FCDD00E9414D /* LaunchScreen.jpg */,
 				AF97E258246106730046FF41 /* AppIcon2.png */,
 				AF97E256245F785F0046FF41 /* AppIcon.png */,
+				AFCF52FC249EC4890071AA80 /* ItunesArtwork@2x.png */,
 				D62977E724288285000C25A1 /* ClustrPlus.xcdatamodeld */,
 				AF514F07242EC184004DBC6C /* GoogleService-Info.plist */,
 				D6C95109243C24C000F9499D /* Update.swift */,
@@ -1216,6 +1219,7 @@
 				D6EE2FEA2429789D00A8BE00 /* Screen Shot 2020-03-23 at 4.06.56 PM.png in Resources */,
 				AF514F08242EC184004DBC6C /* GoogleService-Info.plist in Resources */,
 				AF97E251245F65E40046FF41 /* logo2.png in Resources */,
+				AFCF52FD249EC4890071AA80 /* ItunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1540,13 +1544,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZLK2NUP7FJ;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 9284227JQ4;
 				INFOPLIST_FILE = ClustrPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.clustrplus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clustrplus.decrem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1559,13 +1564,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZLK2NUP7FJ;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 9284227JQ4;
 				INFOPLIST_FILE = ClustrPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.clustrplus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clustrplus.decrem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
