@@ -1,10 +1,4 @@
-//
-//  CreateNewEventViewController.swift
-//  ClustrPlus
-//
-//  Created by Caleb Kim on 4/9/20.
-//  Copyright © 2020 Caleb Kim. All rights reserved.
-//
+
 
 import UIKit
 import Firebase

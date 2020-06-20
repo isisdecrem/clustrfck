@@ -1,10 +1,4 @@
-//
-//  FirstViewController.swift
-//  ClustrPlus
-//
-//  Created by Isis Decrem on 4/19/20.
-//  Copyright © 2020 Isis Decrem. All rights reserved.
-//
+
 
 import UIKit
 

@@ -1,10 +1,3 @@
-//
-//  makeClubViewController.swift
-//  ClustrPlus
-//
-//  Created by Isis Decrem on 3/27/20.
-//  Copyright © 2020 Isis Decrem. All rights reserved.
-//
 
 import UIKit
 import Firebase
